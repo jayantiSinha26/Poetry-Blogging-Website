@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetry Corner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<!---google fonts ke liye google api use kia aur -->
+<!---cdn use kia hai heart icons, social media icons, and other icons-->
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-feather-alt"></i>
+            Poetry Corner
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="poem.html"><i class="fas fa-book-open"></i> Poems</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Poetry Corner</h1>
+            <p>Where words dance and emotions flow</p>
+        </div>
+    </header>
+
+    <section id="poems" class="poems-section">
+        <h2>Featured Poems</h2>
+        <div class="poems-grid">
+            <div class="poem-card">
+                <h3>Whispers of the Wind</h3>
+                <p class="poem-text">
+                    The wind whispers secrets<br>
+                    Through rustling leaves<br>
+                    A gentle melody<br>
+                    That the heart receives
+                </p>
+                <button class="read-more" onclick="window.location.href='poem.html?poem=whispers-of-the-wind'">Read More</button>
+            </div>
+            <div class="poem-card">
+                <h3>Moonlit Dreams</h3>
+                <p class="poem-text">
+                    Silver beams dance<br>
+                    On midnight's stage<br>
+                    Dreams take flight<br>
+                    As stars engage
+                </p>
+                <button class="read-more" onclick="window.location.href='poem.html?poem=moonlit-dreams'">Read More</button>
+            </div>
+            <div class="poem-card">
+                <h3>Autumn's Song</h3>
+                <p class="poem-text">
+                    Golden leaves fall<br>
+                    In a graceful dance<br>
+                    Nature's farewell<br>
+                    To summer's romance
+                </p>
+                <button class="read-more" onclick="window.location.href='poem.html?poem=autumns-song'">Read More</button>
+            </div>
+            <div class="poem-card">
+                <h3>Ocean's Embrace</h3>
+                <p class="poem-text">
+                    Waves crash and roll<br>
+                    In endless motion<br>
+                    The sea's deep soul<br>
+                    A timeless ocean
+                </p>
+                <button class="read-more" onclick="window.location.href='poem.html?poem=oceans-embrace'">Read More</button>
+            </div>
+            <div class="poem-card">
+                <h3>Morning Dew</h3>
+                <p class="poem-text">
+                    Crystal drops sparkle<br>
+                    On petals so fair<br>
+                    Nature's artwork<br>
+                    In morning air
+                </p>
+                <button class="read-more" onclick="window.location.href='poem.html?poem=morning-dew'">Read More</button>
+            </div>
+            <div class="poem-card">
+                <h3>Mountain's Majesty</h3>
+                <p class="poem-text">
+                    Peaks touch the sky<br>
+                    In silent might<br>
+                    Ancient giants<br>
+                    In morning light
+                </p>
+                <button class="read-more" onclick="window.location.href='poem.html?poem=mountains-majesty'">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <div class="divider-line"></div>
+    </div>
+
+    <section id="about" class="about-section">
+        <div class="about-hero">
+            <h2>About Poetry Corner</h2>
+            <div class="about-divider"></div>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p class="about-paragraph">
+                    <i class="fas fa-quote-left about-quote"></i>
+                    This blog is a collection of thoughts, verses, and reflections – drawn from everyday life, fleeting feelings, and timeless experiences. Whether you're here to read, relate, or simply feel, this space is for anyone who finds comfort in words and beauty in expression.
+                </p>
+                <p class="about-paragraph">
+                    From free verse to adventurous, love poems to musings on solitude, each post is a journey – some deeply personal, others inspired by the world around us. I believe poetry isn't just art; it's a way of seeing, healing, and connecting.
+                    <i class="fas fa-quote-right about-quote"></i>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <div class="divider-line"></div>
+    </div>
+
+    <section class="middle-grid-section">
+        <h2>Poetry Collections</h2>
+        <div class="collections-grid">
+            <div class="collection-card">
+                <h3>Nature's Voice</h3>
+                <p>Explore the beauty of nature through poetic verses that capture the essence of the world around us.</p>
+                <button class="explore-btn" onclick="window.location.href='poem.html?poem=natures-voice'">Explore</button>
+            </div>
+            <div class="collection-card">
+                <h3>Love & Romance</h3>
+                <p>Dive into heartfelt expressions of love, passion, and the many shades of romance.</p>
+                <button class="explore-btn" onclick="window.location.href='poem.html?poem=love-romance'">Explore</button>
+            </div>
+            <div class="collection-card">
+                <h3>Life's Journey</h3>
+                <p>Reflections on life's experiences, challenges, and the wisdom gained along the way.</p>
+                <button class="explore-btn" onclick="window.location.href='poem.html?poem=lifes-journey'">Explore</button>
+            </div>
+            <div class="collection-card">
+                <h3>Dreams & Imagination</h3>
+                <p>Journey through the realms of dreams and the limitless power of imagination.</p>
+                <button class="explore-btn" onclick="window.location.href='poem.html?poem=dreams-imagination'">Explore</button>
+            </div>
+            <div class="collection-card">
+                <h3>Seasons of Change</h3>
+                <p>Experience the beauty and transformation of nature through the changing seasons.</p>
+                <button class="explore-btn" onclick="window.location.href='poem.html?poem=seasons-of-change'">Explore</button>
+            </div>
+            <div class="collection-card">
+                <h3>Inner Reflections</h3>
+                <p>Deep contemplations and introspective verses that explore the human spirit.</p>
+                <button class="explore-btn" onclick="window.location.href='poem.html?poem=inner-reflections'">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider">
+        <div class="divider-line"></div>
+    </div>
+
+    <section class="subscription-section">
+        <h2 class="subscription-heading">Subscribe for Updates</h2>
+        <form class="subscription-form">
+            <input type="email" class="subscription-input" placeholder="Enter your email" required>
+            <button type="submit" class="subscription-btn"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-feather-alt"></i>
+                Poetry Corner
+            </div>
+            <p>&copy; 2024 Poetry Corner. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

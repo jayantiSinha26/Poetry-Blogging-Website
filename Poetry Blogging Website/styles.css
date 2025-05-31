@@ -1,0 +1,1444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Section Spacing */
+section {
+    padding: 6rem 5%;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+}
+
+.logo:hover {
+    color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+.logo i {
+    margin-right: 8px;
+    color: #e74c3c;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #14171a;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #e74c3c;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+.nav-links a:hover::before {
+    width: 80%;
+}
+
+.nav-links a.active {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.nav-links a.active::before {
+    width: 80%;
+    background-color: #e74c3c;
+}
+
+.nav-links a i {
+    margin-right: 6px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(248,251,255,0.92) 0%, rgba(230,236,245,0.92) 100%), url('1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #2c3e50;
+    padding: 0 5%;
+    position: relative;
+    margin-top: 80px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    animation: fadeInUp 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+    color: #666;
+    animation: fadeInUp 1.6s 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero-quote {
+    font-size: 2rem;
+    color: rgba(231, 76, 60, 0.2);
+    margin: 0 15px;
+}
+
+/* Poems Section */
+.poems-section {
+    padding: 2rem 5%;
+    background-color: #f9f9f9;
+}
+
+.poems-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.poems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+}
+
+.poem-card {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poem-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.poem-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.read-more {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+}
+
+.read-more:hover {
+    background-color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .poems-section {
+        padding: 1.5rem 5%;
+    }
+
+    .poem-card {
+        padding: 1rem;
+    }
+
+    .poem-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .poem-text {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .read-more {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* About Section Styles (for both index and about page) */
+.about-section {
+    padding: 3rem 5%;
+    background-color: #f9f9f9;
+    margin-top: 2rem;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.about-divider {
+    width: 100px;
+    height: 3px;
+    background-color: #e74c3c;
+    margin: 0 auto;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.about-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.about-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+    .poems-section,
+    .about-section {
+        padding: 2rem 5%;
+    }
+
+    .poem-card,
+    .feature-card {
+        padding: 1.2rem;
+    }
+
+    .about-text {
+        padding: 1.5rem;
+    }
+
+    .about-paragraph {
+        font-size: 1rem;
+    }
+
+    .about-hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5rem 5%;
+    background-color: #f9f9f9;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #e74c3c;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 3rem 5%;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer-logo i {
+    margin-right: 8px;
+    color: #e74c3c;
+}
+
+/* Contact Page Styles */
+.contact-page {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.contact-divider {
+    width: 80px;
+    height: 3px;
+    background: #e74c3c;
+    margin: 20px auto;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Contact Information Section */
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card, .social-card, .hours-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3, .social-card h3, .hours-card h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.info-item i {
+    color: #e74c3c;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.info-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #c0392b;
+}
+
+.hours-card p {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    background: #fff;
+    padding: 48px 40px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.form-group label {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-form-section {
+        padding: 32px 16px 24px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page {
+        padding: 60px 15px;
+    }
+
+    .contact-hero h1 {
+        font-size: 2rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        padding: 0.3rem 0.5rem;
+    }
+
+    .nav-links a:hover::before {
+        width: 60%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .poems-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .poems-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .poems-section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Submit Page Styles */
+.submit-page {
+    padding: 120px 5% 5rem;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.submit-page h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.submit-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.submit-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.submit-grid {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grid-header h2 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.grid-description {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Left Grid - Poem Submission */
+.left-grid {
+    padding: 2.5rem;
+}
+
+.submit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.submit-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.submit-form label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.submit-form input,
+.submit-form textarea,
+.submit-form select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.submit-form textarea[name="poem-content"] {
+    min-height: 200px;
+}
+
+/* Right Grid - Contact Information */
+.right-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-item {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.info-item h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    color: #2c3e50;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #2c3e50;
+    color: white;
+}
+
+.quick-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quick-form .form-group {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design for Submit Page */
+@media (max-width: 1024px) {
+    .submit-container {
+        grid-template-columns: 1fr;
+    }
+
+    .right-grid {
+        order: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .submit-page {
+        padding: 100px 1rem 2rem;
+    }
+
+    .submit-page h1 {
+        font-size: 2.5rem;
+    }
+
+    .left-grid,
+    .right-grid {
+        padding: 1.5rem;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+    }
+}
+
+/* About Page Styles */
+.about-page {
+    padding: 120px 5% 5rem;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.about-divider {
+    width: 100px;
+    height: 3px;
+    background-color: #e74c3c;
+    margin: 0 auto;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 4rem;
+}
+
+.about-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.about-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+.about-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 100px 1rem 2rem;
+    }
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-text {
+        padding: 2rem;
+    }
+
+    .about-paragraph {
+        font-size: 1rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Form Animations and Success Message */
+.form-group {
+    position: relative;
+}
+
+.form-group.focused label {
+    color: #e74c3c;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.success-message {
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Loading State */
+.submit-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.submit-btn:disabled:hover {
+    background-color: #95a5a6;
+}
+
+/* Middle Grid Section */
+.middle-grid-section {
+    padding: 6rem 5%;
+    background-color: #fff;
+}
+
+.middle-grid-section h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.middle-grid-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #e74c3c;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.collection-icon {
+    display: none;
+}
+
+.collection-card {
+    background: #f8f9fa;
+    padding: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.collection-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.collection-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.collection-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.explore-btn {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 0.5rem;
+}
+
+.explore-btn:hover {
+    background-color: #e74c3c;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design for Middle Grid */
+@media (max-width: 768px) {
+    .middle-grid-section {
+        padding: 4rem 5%;
+    }
+
+    .middle-grid-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .collection-card {
+        padding: 2rem;
+    }
+
+    .collection-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .collection-card p {
+        font-size: 1rem;
+    }
+}
+
+/* Contact Page Spacing Enhancements */
+.form-heading {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    letter-spacing: 1px;
+}
+
+.contact-form-section {
+    background: #fff;
+    padding: 48px 40px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 22px;
+}
+
+.contact-form .form-group:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 32px 16px 24px 16px;
+    }
+    .form-heading {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.bottom-contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0 4rem 0;
+    background: #f9f9f9;
+}
+
+.bottom-contact-section .contact-form-section {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+@media (max-width: 768px) {
+    .bottom-contact-section {
+        padding: 3rem 0 2rem 0;
+    }
+    .bottom-contact-section .contact-form-section {
+        max-width: 100%;
+        box-shadow: none;
+    }
+}
+
+/* Subscription Section Styles */
+.subscription-section {
+    background: #f8fbff;
+    padding: 3.5rem 1rem 3.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.07);
+    max-width: 520px;
+    margin: 3rem auto 0 auto;
+}
+
+.subscription-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.subscription-form {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    gap: 0.5rem;
+}
+
+.subscription-input {
+    flex: 1;
+    padding: 0.9rem 1.1rem;
+    border: 1.5px solid #c3cfe2;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background: #fff;
+}
+
+.subscription-input:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.12);
+}
+
+.subscription-btn {
+    background: linear-gradient(90deg, #36d1c4 0%, #1976d2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.13);
+}
+
+.subscription-btn:hover, .subscription-btn:focus {
+    background: linear-gradient(90deg, #1976d2 0%, #36d1c4 100%);
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0 4px 20px rgba(25, 118, 210, 0.18);
+}
+
+@media (max-width: 600px) {
+    .subscription-section {
+        padding: 2rem 0.5rem;
+        max-width: 98%;
+    }
+    .subscription-form {
+        flex-direction: column;
+        gap: 0.8rem;
+        max-width: 100%;
+    }
+    .subscription-btn {
+        width: 100%;
+    }
+}
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+    margin: 4px 0;
+}
+
+.divider-line {
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #6b4f4f, transparent);
+}
+
+/* Section Heading Styles */
+section h2 {
+    text-align: center;
+    width: 100%;
+    min-height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #2c3e50;
+    opacity: 1;
+    transform: none;
+    transition: none;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #e74c3c;
+}
+
+/* Remove animation and typing effect for headings */
+.animated-heading,
+.animated-heading.animated,
+.fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+.animated-heading::after {
+    content: none !important;
+    animation: none !important;
+}
+
+/* Responsive adjustments for headings */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Poem Page Background */
+.poem-bg {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f4f1 0%, #e0eafc 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.poem-detail-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(44, 62, 80, 0.09);
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.poem-detail-card h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.poem-detail-card h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.poem-full-text {
+    font-size: 1.15rem;
+    color: #444;
+    font-family: 'Poppins', sans-serif;
+    white-space: pre-wrap;
+    margin-bottom: 1.5rem;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.back-btn {
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.back-btn:hover {
+    background: #e74c3c;
+}
+
+.nav-links a.active {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .poem-detail-card {
+        padding: 1.2rem 0.5rem;
+        max-width: 98vw;
+    }
+    .poem-detail-card h1 {
+        font-size: 1.3rem;
+    }
+    .poem-full-text {
+        font-size: 1rem;
+    }
+} 

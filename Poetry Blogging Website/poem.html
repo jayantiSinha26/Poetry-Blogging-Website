@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem - Poetry Corner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><i class="fas fa-feather-alt"></i> Poetry Corner</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index.html#poems" class="active"><i class="fas fa-book-open"></i> Poems</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+    <main class="poem-detail-main poem-bg">
+        <div id="poem-detail-container">
+            <div class="poem-detail-card poem-detail-bg" id="poem-detail-card">
+                <button onclick="window.history.back()" class="back-btn">&larr; Back</button>
+                <h1 id="poem-title"></h1>
+                <h3 id="poet-name" style="color:#888; margin-bottom:1.5rem;"></h3>
+                <pre id="poem-full-text" class="poem-full-text"></pre>
+            </div>
+        </div>
+        <div id="poem-grids" style="display:none;">
+            <section class="middle-grid-section" style="background:transparent; box-shadow:none;">
+                <h2>Poetry Collections</h2>
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <h3>Nature's Voice</h3>
+                        <p>Explore the beauty of nature through poetic verses that capture the essence of the world around us.</p>
+                        <button class="explore-btn" onclick="window.location.href='poem.html?poem=natures-voice'">Explore</button>
+                    </div>
+                    <div class="collection-card">
+                        <h3>Love & Romance</h3>
+                        <p>Dive into heartfelt expressions of love, passion, and the many shades of romance.</p>
+                        <button class="explore-btn" onclick="window.location.href='poem.html?poem=love-romance'">Explore</button>
+                    </div>
+                    <div class="collection-card">
+                        <h3>Life's Journey</h3>
+                        <p>Reflections on life's experiences, challenges, and the wisdom gained along the way.</p>
+                        <button class="explore-btn" onclick="window.location.href='poem.html?poem=lifes-journey'">Explore</button>
+                    </div>
+                    <div class="collection-card">
+                        <h3>Dreams & Imagination</h3>
+                        <p>Journey through the realms of dreams and the limitless power of imagination.</p>
+                        <button class="explore-btn" onclick="window.location.href='poem.html?poem=dreams-imagination'">Explore</button>
+                    </div>
+                    <div class="collection-card">
+                        <h3>Seasons of Change</h3>
+                        <p>Experience the beauty and transformation of nature through the changing seasons.</p>
+                        <button class="explore-btn" onclick="window.location.href='poem.html?poem=seasons-of-change'">Explore</button>
+                    </div>
+                    <div class="collection-card">
+                        <h3>Inner Reflections</h3>
+                        <p>Deep contemplations and introspective verses that explore the human spirit.</p>
+                        <button class="explore-btn" onclick="window.location.href='poem.html?poem=inner-reflections'">Explore</button>
+                    </div>
+                </div>
+            </section>
+            <section class="poems-section" style="background:transparent; box-shadow:none;">
+                <h2>Featured Poems</h2>
+                <div class="poems-grid">
+                    <div class="poem-card">
+                        <h3>Whispers of the Wind</h3>
+                        <p class="poem-text">
+                            The wind whispers secrets<br>
+                            Through rustling leaves<br>
+                            A gentle melody<br>
+                            That the heart receives
+                        </p>
+                        <button class="read-more" onclick="window.location.href='poem.html?poem=whispers-of-the-wind'">Read More</button>
+                    </div>
+                    <div class="poem-card">
+                        <h3>Moonlit Dreams</h3>
+                        <p class="poem-text">
+                            Silver beams dance<br>
+                            On midnight's stage<br>
+                            Dreams take flight<br>
+                            As stars engage
+                        </p>
+                        <button class="read-more" onclick="window.location.href='poem.html?poem=moonlit-dreams'">Read More</button>
+                    </div>
+                    <div class="poem-card">
+                        <h3>Autumn's Song</h3>
+                        <p class="poem-text">
+                            Golden leaves fall<br>
+                            In a graceful dance<br>
+                            Nature's farewell<br>
+                            To summer's romance
+                        </p>
+                        <button class="read-more" onclick="window.location.href='poem.html?poem=autumns-song'">Read More</button>
+                    </div>
+                    <div class="poem-card">
+                        <h3>Ocean's Embrace</h3>
+                        <p class="poem-text">
+                            Waves crash and roll<br>
+                            In endless motion<br>
+                            The sea's deep soul<br>
+                            A timeless ocean
+                        </p>
+                        <button class="read-more" onclick="window.location.href='poem.html?poem=oceans-embrace'">Read More</button>
+                    </div>
+                    <div class="poem-card">
+                        <h3>Morning Dew</h3>
+                        <p class="poem-text">
+                            Crystal drops sparkle<br>
+                            On petals so fair<br>
+                            Nature's artwork<br>
+                            In morning air
+                        </p>
+                        <button class="read-more" onclick="window.location.href='poem.html?poem=morning-dew'">Read More</button>
+                    </div>
+                    <div class="poem-card">
+                        <h3>Mountain's Majesty</h3>
+                        <p class="poem-text">
+                            Peaks touch the sky<br>
+                            In silent might<br>
+                            Ancient giants<br>
+                            In morning light
+                        </p>
+                        <button class="read-more" onclick="window.location.href='poem.html?poem=mountains-majesty'">Read More</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+    // Poem data
+    const poems = {
+        'whispers-of-the-wind': {
+            title: 'Whispers of the Wind',
+            poet: 'A. J. Basit',
+            text: `The wind whispers secrets\nThrough rustling leaves\nA gentle melody\nThat the heart receives`
+        },
+        'moonlit-dreams': {
+            title: 'Moonlit Dreams',
+            poet: 'A. J. Basit',
+            text: `Silver beams dance\nOn midnight\'s stage\nDreams take flight\nAs stars engage`
+        },
+        'autumns-song': {
+            title: "Autumn's Song",
+            poet: 'A. J. Basit',
+            text: `Golden leaves fall\nIn a graceful dance\nNature\'s farewell\nTo summer\'s romance`
+        },
+        'oceans-embrace': {
+            title: "Ocean's Embrace",
+            poet: 'A. J. Basit',
+            text: `Waves crash and roll\nIn endless motion\nThe sea\'s deep soul\nA timeless ocean`
+        },
+        'morning-dew': {
+            title: 'Morning Dew',
+            poet: 'A. J. Basit',
+            text: `Crystal drops sparkle\nOn petals so fair\nNature\'s artwork\nIn morning air`
+        },
+        'mountains-majesty': {
+            title: "Mountain's Majesty",
+            poet: 'A. J. Basit',
+            text: `Peaks touch the sky\nIn silent might\nAncient giants\nIn morning light`
+        },
+        // Poetry Collections
+        'natures-voice': {
+            title: "Nature's Voice",
+            poet: 'Emily Rivers',
+            text: `Beneath the emerald canopy\nA songbird greets the dawn\nPetals open quietly\nTo dew upon the lawn\n\nThe river hums a lullaby\nThe breeze begins to play\nNature's voice in harmony\nWelcomes in the day.`
+        },
+        'love-romance': {
+            title: "Love & Romance",
+            poet: 'Sofia Hart',
+            text: `In the hush of midnight\nTwo hearts softly meet\nA dance of gentle longing\nIn every pulse and beat\n\nEyes that speak in silence\nHands that intertwine\nLove's eternal promise\nForever yours and mine.`
+        },
+        'lifes-journey': {
+            title: "Life's Journey",
+            poet: 'David Miles',
+            text: `Paths that twist and wander\nMountains yet to climb\nLessons learned in silence\nAnd wisdom found in time\n\nEvery step a story\nEvery scar a guide\nLife's journey ever onward\nWith hope at every side.`
+        },
+        'dreams-imagination': {
+            title: "Dreams & Imagination",
+            poet: 'Lila Dreamer',
+            text: `Close your eyes and wander\nTo lands of make-believe\nWhere castles float on starlight\nAnd magic webs we weave\n\nImagination's kingdom\nIs boundless, wild, and free\nA world of endless wonder\nFor all who dare to see.`
+        },
+        'seasons-of-change': {
+            title: "Seasons of Change",
+            poet: 'Autumn Leigh',
+            text: `Spring awakes in color\nSummer laughs in light\nAutumn whispers golden\nWinter dreams in white\n\nEach season brings a lesson\nA chance to grow and learn\nThe world in constant motion\nWith every season's turn.`
+        },
+        'inner-reflections': {
+            title: "Inner Reflections",
+            poet: 'Noah Wells',
+            text: `In quiet contemplation\nI search the soul within\nFor truths that hide in shadow\nAnd hopes that might begin\n\nA mirror for my spirit\nA window to my mind\nInner reflections guiding\nThe peace I seek to find.`
+        }
+    };
+    // Get query param
+    function getPoemSlug() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('poem');
+    }
+    const slug = getPoemSlug();
+    const poem = poems[slug];
+    if (poem) {
+        document.getElementById('poem-title').textContent = poem.title;
+        document.getElementById('poet-name').textContent = 'By ' + poem.poet;
+        document.getElementById('poem-full-text').textContent = poem.text;
+        document.getElementById('poem-detail-container').style.display = '';
+        document.getElementById('poem-grids').style.display = 'none';
+    } else {
+        document.getElementById('poem-detail-container').style.display = 'none';
+        document.getElementById('poem-grids').style.display = '';
+    }
+    </script>
+</body>
+</html> 
